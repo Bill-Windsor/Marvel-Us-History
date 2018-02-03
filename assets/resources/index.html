@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Superhero History Database</title>
+  <title>Marvel Database</title>
   <!-- Title Icon -->
   <link rel="shortcut icon" href="assets/images/captainamericashield.png">
 
@@ -24,34 +24,42 @@
 
 </head>
 <body>
-  <h1>Hello</h1>
   <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
         </button>
-        <a class="navbar-brand" href="index.html">Marvel Character History Database</a>
+        <a class="navbar-brand" href="index.html">Marvel Database</a>
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-left">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Phase 1 <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Era 1 <span class="caret"></span></a>
                 <ul class="dropdown-menu" id = "pOne">
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Phase 2 <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Era 2 <span class="caret"></span></a>
                 <ul class="dropdown-menu" id = "pTwo">
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Phase 3 <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Era 3 <span class="caret"></span></a>
                 <ul class="dropdown-menu" id = "pThree">
                 </ul>
-              </li>
+                <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
+      </li>
+    </ul>
+    <!--Search Bar in header-->
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
           </ul>
       </div><!-- /.navbar-collapse -->
     </div>
@@ -95,30 +103,7 @@
         <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
       </div>
     </div>
-    <!-- search boxes -->
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Marvel Character Movies</h3>
-        </div>
-        <div class="panel-body">
-          <input type="text" name="" id="characterSearch" class="form-control">
-          <br />
-          <button type="button" class="btn btn-primary" id ="characterSubmit" href = "#infoView">Search</button>
-        </div>
-      </div>
-
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Marvel Character History</h3>
-        </div>
-        <div class="panel-body">
-          <input type="text" name="" id="comicSearch" class="form-control">
-          <br />
-          <button type="button" class="btn btn-primary" id ="characterSubmit">Search</button>
-        </div>
-      </div>
-    </div>
+   
     <!-- Lower Section -->
     <div class ="container-fluid" id ="infoView">
       <!-- Movies View Section -->
@@ -130,6 +115,135 @@
     </div>
   </div>
 
+<!--Timeline HTML-->
+<div id="container">
+    <div id="thumbs">
+    <div class="history-block bg-66">
+      <div class="cover"></div>
+      <div class="year">1960 - 1970</div>
+      <div class="title">Marvel Characters</div>
+      <div class="timeline">
+        <ul>
+          <li><a href="" class="timelineYear">1960</a></li>
+          <li><a href="" class="timelineYear">1961</a></li>
+          <li><a href="" class="timelineYear">1962</a></li>
+          <li><a href="" class="timelineYear">1963</a></li>
+          <li><a href="" class="timelineYear">1964</a></li>
+          <li><a href="" class="timelineYear">1965</a></li>
+          <li><a href="" class="timelineYear">1966</a></li>
+          <li><a href="" class="timelineYear">1967</a></li>
+          <li><a href="" class="timelineYear">1968</a></li>
+          <li><a href="" class="timelineYear">1969</a></li>
+          <li><a href="" class="timelineYear">1970</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="history-block bg-76">
+      <div class="cover"></div>
+      <div class="year">1971 - 1980</div>
+      <div class="title">Marvel Characters</div>
+      <div class="timeline">
+      <ul>
+          <li><a href="" class="timelineYear">1971</a></li>
+          <li><a href="" class="timelineYear">1972</a></li>
+          <li><a href="" class="timelineYear">1973</a></li>
+          <li><a href="" class="timelineYear">1974</a></li>
+          <li><a href="" class="timelineYear">1975</a></li>
+          <li><a href="" class="timelineYear">1976</a></li>
+          <li><a href="" class="timelineYear">1977</a></li>
+          <li><a href="" class="timelineYear">1978</a></li>
+          <li><a href="" class="timelineYear">1979</a></li>
+          <li><a href="" class="timelineYear">1980</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="history-block bg-86">
+      <div class="cover"></div>
+      <div class="year">1981 - 1990</div>
+      <div class="title">Marvel Characters</div>
+      <div class="timeline">
+      <ul>
+          <li><a href="" class="timelineYear">1981</a></li>
+          <li><a href="" class="timelineYear">1982</a></li>
+          <li><a href="" class="timelineYear">1983</a></li>
+          <li><a href="" class="timelineYear">1984</a></li>
+          <li><a href="" class="timelineYear">1985</a></li>
+          <li><a href="" class="timelineYear">1986</a></li>
+          <li><a href="" class="timelineYear">1987</a></li>
+          <li><a href="" class="timelineYear">1988</a></li>
+          <li><a href="" class="timelineYear">1989</a></li>
+          <li><a href="" class="timelineYear">1990</a></li>
+       </ul>
+      </div>
+    </div>
+    <div class="history-block bg-96">
+      <div class="cover"></div>
+      <div class="year">1991 - 2000</div>
+      <div class="title">Marvel Characters</div>
+      <div class="timeline">
+      <ul>
+          <li><a href="" class="timelineYear">1991</a></li>
+          <li><a href="" class="timelineYear">1992</a></li>
+          <li><a href="" class="timelineYear">1993</a></li>
+          <li><a href="" class="timelineYear">1994</a></li>
+          <li><a href="" class="timelineYear">1995</a></li>
+          <li><a href="" class="timelineYear">1996</a></li>
+          <li><a href="" class="timelineYear">1997</a></li>
+          <li><a href="" class="timelineYear">1998</a></li>
+          <li><a href="" class="timelineYear">1999</a></li>
+          <li><a href="" class="timelineYear">2000</a></li>
+       </ul>
+      </div>
+    </div>
+    <div class="history-block bg-06">
+      <div class="cover"></div>
+      <div class="year">2001-2010</div>
+      <div class="title">Marvel Characters</div>
+      <div class="timeline">
+      <ul>
+          <li><a href="" class="timelineYear">2001</a></li>
+          <li><a href="" class="timelineYear">2002</a></li>
+          <li><a href="" class="timelineYear">2003</a></li>
+          <li><a href="" class="timelineYear">2004</a></li>
+          <li><a href="" class="timelineYear">2005</a></li>
+          <li><a href="" class="timelineYear">2006</a></li>
+          <li><a href="" class="timelineYear">2007</a></li>
+          <li><a href="" class="timelineYear">2008</a></li>
+          <li><a href="" class="timelineYear">2009</a></li>
+          <li><a href="" class="timelineYear">2010</a></li>
+       </ul>
+      </div>
+    </div>
+    <div class="history-block bg-06">
+      <div class="cover"></div>
+      <div class="year">2011-2018</div>
+      <div class="title">Marvel Characters</div>
+      <div class="timeline">
+      <ul>
+          <li><a href="" class="timelineYear">2011</a></li>
+          <li><a href="" class="timelineYear">2012</a></li>
+          <li><a href="" class="timelineYear">2013</a></li>
+          <li><a href="" class="timelineYear">2014</a></li>
+          <li><a href="" class="timelineYear">2015</a></li>
+          <li><a href="" class="timelineYear">2016</a></li>
+          <li><a href="" class="timelineYear">2017</a></li>
+          <li><a href="" class="timelineYear">2018</a></li>
+       </ul>
+      </div>
+    </div>
+    <div class="history-block bg-16">
+      <div class="cover"></div>
+      <div class="year">Future</div>
+      <div class="title">Marvel Characters</div>
+      <div class="timeline">
+    </div>
+    </div>
+    </div>
+  </div>
+
+
+
+<!--Footer -->  
   <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
     <div class="container">
       <footer class = "footer">
