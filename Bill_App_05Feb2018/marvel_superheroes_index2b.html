@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Marvel Characters!</title>
+
+<!--  Bootstrap and Custom Style Sheet -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/marvel_superheroes_style.css">
+
+    <!-- Bootstrap: Latest Compiled and Minified CSS
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        ** Bootstrap: Optional theme 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        ** Placeholder for Google Fonts reference:
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    -->
+
+<!-- Latest compiled and minified JavaScript and jQuery (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- More simplified jQuery reference
+    <script src="https://code.jquery.com/jquery.js"></script>
+    -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- For Customizing any Bootstrap JavaScript, we would use the link below instead: 
+    <script src="js/bootstrap.min.js"></script>
+    -->
+
+  <!-- Link to Moment.js -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <!-- Link to Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="page-header">
+         <h2 class="text-center">Marvel Character Time</h2>
+         <h3 class="text-center">Be a superhero today.</h3>
+      </div>
+
+
+      <div id="navBar1">
+         <h4 class="text-center">Beautiful Nav Bar Here</h4>
+      </div>
+
+<!-- Carousel -->
+<div id="theCarousel" class="carousel slide" data-ride="carousel">
+ 
+  <!-- Define how many slides to put in the carousel -->
+  <ol class="carousel-indicators">
+    <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+    <li data-target="#theCarousel" data-slide-to="1"> </li>
+    <li data-target ="#theCarousel" data-slide-to="2"> </li>
+  </ol >
+ 
+   <div class="carousel-inner">
+
+       <div class="item active" >
+         <div class ="slide1"></div>
+         <div class="carousel-caption">
+            <h1>Superhero #1</h1>
+            <p>Dynamic Image Here</p>
+            <p><a href="#" class="btn btn-primary btn-lg" id="charSelect1">View Character</a></p>
+         </div>
+      </div>
+      <div class="item">
+         <div class="slide2"></div>
+         <div class="carousel-caption">
+            <h1>Superhero #2</h1>
+            <p>Fantastic Image Here</p>
+            <p><a href="#" class="btn btn-primary btn-lg" id="charSelect2">View Character</a></p>
+         </div>
+      </div>
+      <div class="item">
+         <div class="slide3"></div>
+            <div class="carousel-caption">
+            <h1>Superhero #3</h1>
+            <p>Amazing Image Here</p>
+            <p><a href="#" class="btn btn-primary btn-lg" id="charSelect3">View Character</a></p>
+         </div>
+      </div>
+   </div>
+
+  <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"> </span>
+  </a>
+  <a class="right carousel-control" href="#theCarousel" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+  </div>
+ 
+
+ <!--
+   <aside id="character_bio">
+      <h2>Character Bio and Synopsis</h2>
+      <br>
+      <h2>Character reference information here</h2> <br>
+      <img src="images/spider-man_image.png" width="100%" height="100%"/> <br><br>
+
+      <ul style="margin-left: 15px;">
+         <li><b>Placeholder #1</b></li> <br>
+         <li><b>Placeholder #2</b></li> <br>
+         <li><b>Placeholder #3</b></li> <br>
+      </ul>
+
+      <h3><a href="#" target="_blank" onmouseover="this.style.color = 'green';" onmouseout="this.style.color = 'purple';"> <b>Tickets to Meet Your Superhero at ComicCon</b> </a> </h3> <br>
+   </aside>
+
+   <br clear="all" /> 
+-->
+
+   <div id="userComm2"> 
+      <h4>Form control -- two input options below:</h4>
+
+      <div id="userComm3">
+         <form>
+            <div class="form-group">
+               <label for="character-input">Request a Marvel Character:</label>
+               <input type="text" class="form-control" id="character-input">
+             </div>
+         </form>
+         <form>
+            <div class="form-group">
+               <label for="character-input">Request the character's interaction with the opposing villian:</label>
+               <input type="text" class="form-control" id="action-input">
+            <!-- Button triggers new character name to be added -->
+            <input id="add-character" type="submit" value="Submit">
+            </div>
+         </form>
+      </div>
+   </div>
+
+  <br clear="all" /> 
+ 
+  <div id="image_gallery"> 
+    <h4>Display Character Images Here</h4>
+    <div display : inline-block>
+      <img src="images/captainamerica1.jpg" class="scaled" width="240" height="150"/>
+      <img src="images/spiderman1.jpg" class="scaled" width="240" height="150"/>
+      <img src="images/wolverine1.jpg" class="scaled" width="240" height="150"/>
+      <img src="images/marvel_avengers_photo3.jpg" class="scaled" width="240" height="150"/>
+      <img src="images/marvel_avengers_photo5.jpg" class="scaled" width="240" height="150"/>
+    </div>
+  </div> <br>
+
+    <div id="videoPlayer">
+    <!--
+      <iframe id=videoPlayer width="900" height="580" src="https://www.youtube.com/embed/gbK2U4gO4vU">
+      </iframe>
+    -->
+    </div>
+
+  <script language="javascript" type="text/javascript">
+
+//  $(document).ready(function(){
+
+//  "Marvel Avengers Infinity War" Movie Trailer
+//  var trailer = "https://www.youtube.com/watch?v=gbK2U4gO4vU"
+    var movieName = $("").val();
+    var movieYear = $("").val();
+    var vidId = "gbK2U4gO4vU"
+//  var videoId = data.trailer.replace("https://youtu.be/", "");
+
+    $('#videoPlayer').html("<iframe width='900' height='580' src='https://www.youtube.com/embed/" + vidId + "' frameborder='0' allowfullscreen>");
+
+
+
+  </script>
+    
+  </div>
+</body>
+</html>
