@@ -49,7 +49,7 @@
 
 <!-- col means column, md >=992px (Also use xs, sm and lg), and the 3 represents the size of the column
 3 * 4 = 12 (A 6 column layout would use 2 if they had equal size) -->
-      <div class="row" display="inline-block">
+      <div class="row">
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
   <!-- Drop Down Menus -->
@@ -128,6 +128,7 @@
               <li><a href="#"> 8. Spider-Man</a></li>
               <li><a href="#"> 9. X-Men: Days of Future Past</a></li>
               <li><a href="#">10. X-Men: First Class</a></li>
+            </ul>
           </div>
         </div>
 
@@ -139,94 +140,108 @@
 
 <!-- ".row" finish -->
     </div>
+  </ul>
+
+  <div class="row">
 
 <!-- Carousel -->
 <!-- Surround everything with a div with the class carousel slide -->
-<div id="theCarousel" class="carousel slide" data-ride="carousel">
- 
-  <!-- Define how many slides to put in the carousel -->
-  <ol class="carousel-indicators">
-    <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
-    <li data-target="#theCarousel" data-slide-to="1"> </li>
-    <li data-target ="#theCarousel" data-slide-to="2"> </li>
-  </ol >
- 
-   <div class="carousel-inner">
+    <div class="col-md-9">
+      <div id="theCarousel" class="carousel slide" data-ride="carousel">
+       
+        <!-- Define how many slides to put in the carousel -->
+        <ol class="carousel-indicators">
+          <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+          <li data-target="#theCarousel" data-slide-to="1"> </li>
+          <li data-target ="#theCarousel" data-slide-to="2"> </li>
+        </ol >
+       
+         <div class="carousel-inner">
 
-       <div class="item active" >
-         <div class ="slide1"></div>
-         <div class="carousel-caption">
-            <h1>Superhero #1</h1>
-            <p>Dynamic Image Here</p>
-            <p><a href="#" class="btn btn-primary btn-lg" id="charSelect1">View Character</a></p>
-         </div>
-      </div>
-      <div class="item">
-         <div class="slide2"></div>
-         <div class="carousel-caption">
-            <h1>Superhero #2</h1>
-            <p>Fantastic Image Here</p>
-            <p><a href="#" class="btn btn-primary btn-lg" id="charSelect2">View Character</a></p>
-         </div>
-      </div>
-      <div class="item">
-         <div class="slide3"></div>
-            <div class="carousel-caption">
-            <h1>Superhero #3</h1>
-            <p>Amazing Image Here</p>
-            <p><a href="#" class="btn btn-primary btn-lg" id="charSelect3">View Character</a></p>
-         </div>
-      </div>
-   </div>
-
-  <a class="left carousel-control" href="#theCarousel" data-slide="prev">
-  <span class="glyphicon glyphicon-chevron-left"> </span>
-  </a>
-  <a class="right carousel-control" href="#theCarousel" data-slide="next">
-  <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-  </div>
- 
-
- <!--
-   <aside id="character_bio">
-      <h2>Character Bio and Synopsis</h2>
-      <br>
-      <h2>Character reference information here</h2> <br>
-      <img src="images/spider-man_image.png" width="100%" height="100%"/> <br><br>
-
-      <ul style="margin-left: 15px;">
-         <li><b>Placeholder #1</b></li> <br>
-         <li><b>Placeholder #2</b></li> <br>
-         <li><b>Placeholder #3</b></li> <br>
-      </ul>
-
-      <h3><a href="#" target="_blank" onmouseover="this.style.color = 'green';" onmouseout="this.style.color = 'purple';"> <b>Tickets to Meet Your Superhero at ComicCon</b> </a> </h3> <br>
-   </aside>
-
-   <br clear="all" /> 
--->
-
-   <div id="userComm2"> 
-      <h4>Form control -- two input options below:</h4>
-
-      <div id="userComm3">
-         <form>
-            <div class="form-group">
-               <label for="character-input">Request a Marvel Character:</label>
-               <input type="text" class="form-control" id="character-input">
-             </div>
-         </form>
-         <form>
-            <div class="form-group">
-               <label for="character-input">Second request category (if supported):</label>
-               <input type="text" class="form-control" id="action-input">
-            <!-- Button triggers new character name to be added -->
-            <input id="add-character" type="submit" value="Submit">
+             <div class="item active" >
+               <div class ="slide1"></div>
+               <div class="carousel-caption">
+                  <h1>Superhero #1</h1>
+                  <p>Dynamic Image Here</p>
+                  <p><a href="#" class="btn btn-primary btn-lg" id="charSelect1">View Character</a></p>
+               </div>
             </div>
-         </form>
+            <div class="item">
+               <div class="slide2"></div>
+               <div class="carousel-caption">
+                  <h1>Superhero #2</h1>
+                  <p>Fantastic Image Here</p>
+                  <p><a href="#" class="btn btn-primary btn-lg" id="charSelect2">View Character</a></p>
+               </div>
+            </div>
+            <div class="item">
+               <div class="slide3"></div>
+                  <div class="carousel-caption">
+                  <h1>Superhero #3</h1>
+                  <p>Amazing Image Here</p>
+                  <p><a href="#" class="btn btn-primary btn-lg" id="charSelect3">View Character</a></p>
+               </div>
+            </div>
+         </div>
+
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"> </span>
+        </a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
       </div>
-   </div>
+    </div>
+
+    
+    <div class="col-md-3">
+        <!-- <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> -->
+        <!-- This is a button!<span class="caret"></span></button> -->
+
+       <aside id="character_bio">
+          <h4>Character Bio and Synopsis</h4> <br>
+          <h4>Character reference information here</h4> <br>
+          <img src="images/jeangrey1.jpg" width="200px" height="200px"/> <br>
+          <ul style="margin-left: 15px;">
+             <li><b>Placeholder #1</b></li> <br>
+             <li><b>Placeholder #2</b></li> <br>
+             <li><b>Placeholder #3</b></li> <br>
+          </ul>
+        </aside>
+    </div>
+    <!--   <h3><a href="#" target="_blank" onmouseover="this.style.color = 'green';" onmouseout="this.style.color = 'purple';"> <b>Tickets to Meet Your Superhero at ComicCon</b> </a> </h3> <br>
+      </aside>  
+
+        <h4><a href="#userComm4" data-toggle="collapse">Column 2</a></h4>
+        <div id="userComm4" class="collapse in">Quisque rutrum augue odio, eu placerat diam bibendum id. Donec at fringilla leo, non varius magna. Vestibulum finibus, lacus at gravida condimentum, tellus mauris imperdiet orci, a pretium justo nulla sit amet nunc. Class aptent taciti sociosqu ad litora torquent per conubia.</div>
+ -->
+
+
+  <!-- ".row" finish -->  
+    </div>
+
+  <br clear="all" />
+
+ <div id="userComm2"> 
+    <h4>Form control -- two input options below:</h4>
+
+    <div id="userComm3">
+       <form>
+          <div class="form-group">
+             <label for="character-input">Request a Marvel Character:</label>
+             <input type="text" class="form-control" id="character-input">
+           </div>
+       </form>
+       <form>
+          <div class="form-group">
+             <label for="character-input">Second request category (if supported):</label>
+             <input type="text" class="form-control" id="action-input">
+          <!-- Button triggers new character name to be added -->
+          <input id="add-character" type="submit" value="Submit">
+          </div>
+        </form>
+    </div>
+  </div>
 
   <br clear="all" /> 
  
