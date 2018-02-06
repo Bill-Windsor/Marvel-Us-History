@@ -7,7 +7,7 @@
   <title>Marvel Characters!</title>
 
 <!--  Bootstrap and Custom Style Sheet -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap1.css">
 <link rel="stylesheet" type="text/css" href="css/marvel_superheroes_style.css">
 
     <!-- Bootstrap: Latest Compiled and Minified CSS
@@ -41,16 +41,107 @@
     <div class="container">
 
       <div class="page-header">
-         <h2 class="text-center">Marvel Character Time</h2>
-         <h3 class="text-center">Be a superhero today.</h3>
+         <h2 class="text-center">Marvel Superhero Database</h2>
+         <h3 class="text-center">Marvel Characters Image and Movie Reference</h3>
       </div>
-
 
       <div id="navBar1">
-         <h4 class="text-center">Beautiful Nav Bar Here</h4>
-      </div>
+
+<!-- col means column, md >=992px (Also use xs, sm and lg), and the 3 represents the size of the column
+3 * 4 = 12 (A 6 column layout would use 2 if they had equal size) -->
+      <div class="row" display="inline-block">
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+  <!-- Drop Down Menus -->
+          <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Select a Marvel Superhero!
+          <!-- Display icon in button -->
+            <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Marvel Characters: Top 10</li>
+              <li><a href="#">Spider-Man</a></li>
+              <li><a href="#">Captain America</a></li>
+              <li><a href="#">Wolverine</a></li>
+              <li><a href="#">Daredevil</a></li>
+              <li><a href="#">Dr. Doom</a></li>
+              <li><a href="#">Magneto</a></li>
+              <li><a href="#">Thor</a></li>
+              <li><a href="#">Incredible Hulk</a></li>
+              <li><a href="#">Iron Man</a></li>
+              <li><a href="#">Cyclops</a></li>
+  <!-- Separator for menu list -->
+  <!-- <li role="separator" class="divider"></li>  -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Select a Marvel Superhero!
+          <!-- Display icon in button -->
+            <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Marvel Characters: #11-20</li>
+              <li><a href="#">The Thing</a></li>
+              <li><a href="#">Deadpool</a></li>
+              <li><a href="#">Storm</a></li>
+              <li><a href="#">Hawkeye</a></li>
+              <li><a href="#">Kitty Pryde</a></li>
+              <li><a href="#">Nightcrawler</a></li>
+              <li><a href="#">Captain Marvel</a></li>
+              <li><a href="#">She-Hulk</a></li>
+              <li><a href="#">Dr. Strange</a></li>
+              <li><a href="#">Jean Grey</a></li>
+            </ul>
+          </div>
+        </div>
+
+<!-- Clearfix div (if necessary for responsive design)
+    <div class="clearfix visible-sm"></div>   -->
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Select a Marvel Top-10 Movie
+          <!-- Display icon in button -->
+            <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+              <!-- Unselectable header -->
+              <li class="dropdown-header">Marvel Movies: Top 10</li>
+              <li><a href="#"> 1. The Avengers</a></li>              
+              <li><a href="#"> 2. Iron Man</a></li>
+              <li><a href="#"> 3. Guardians of the Galaxy</a></li>
+              <li><a href="#"> 4. Captain America: Winter Soldier</a></li>
+              <li><a href="#"> 5. Spider-Man 2</a></li>
+              <li><a href="#"> 6. Captain America: Civil War</a></li>
+              <li><a href="#"> 7. X2: X-Men United</a></li>
+              <li><a href="#"> 8. Spider-Man</a></li>
+              <li><a href="#"> 9. X-Men: Days of Future Past</a></li>
+              <li><a href="#">10. X-Men: First Class</a></li>
+          </div>
+        </div>
+
+<!-- Search Bar In-Line -->
+          <form class="navbar-form push-left" role="search">
+              <input type="text" class="form-control" placeholder="Search">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+
+<!-- ".row" finish -->
+    </div>
 
 <!-- Carousel -->
+<!-- Surround everything with a div with the class carousel slide -->
 <div id="theCarousel" class="carousel slide" data-ride="carousel">
  
   <!-- Define how many slides to put in the carousel -->
@@ -128,7 +219,7 @@
          </form>
          <form>
             <div class="form-group">
-               <label for="character-input">Request the character's interaction with the opposing villian:</label>
+               <label for="character-input">Second request category (if supported):</label>
                <input type="text" class="form-control" id="action-input">
             <!-- Button triggers new character name to be added -->
             <input id="add-character" type="submit" value="Submit">
@@ -141,23 +232,27 @@
  
   <div id="image_gallery"> 
     <h4>Display Character Images Here</h4>
-    <div display : inline-block>
-      <img src="images/captainamerica1.jpg" class="scaled" width="240" height="150"/>
-      <img src="images/spiderman1.jpg" class="scaled" width="240" height="150"/>
-      <img src="images/wolverine1.jpg" class="scaled" width="240" height="150"/>
-      <img src="images/marvel_avengers_photo3.jpg" class="scaled" width="240" height="150"/>
-      <img src="images/marvel_avengers_photo5.jpg" class="scaled" width="240" height="150"/>
+    <div display: inline-block>
+      <img src="images/captainmarvel1.jpg" class="scaled" width="250" height="170"/>
+      <img src="images/jeangrey1.jpg" class="scaled" width="250" height="170"/>
+      <img src="images/kittypryde1.jpg" class="scaled" width="250" height="170"/>
+      <img src="images/magneto1.jpg" class="scaled" width="250" height="170"/>
+      <img src="images/storm1.jpg" class="scaled" width="250" height="170"/>
     </div>
   </div> <br>
 
-    <div id="videoPlayer">
-    <!--
-      <iframe id=videoPlayer width="900" height="580" src="https://www.youtube.com/embed/gbK2U4gO4vU">
-      </iframe>
-    -->
-    </div>
+  <!-- Well for YouTube video player -->
+    <div id="videoPlayer1"></div>
 
-  <script language="javascript" type="text/javascript">
+  <!-- Well for Vimeo video player -->
+    <div id="videoPlayer2"></div>
+
+
+  <!-- Load Vimeo video player API -->
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+  <!-- Initiate JavaScript program -->
+<script language="javascript" type="text/javascript">
 
 //  $(document).ready(function(){
 
@@ -168,10 +263,112 @@
     var vidId = "gbK2U4gO4vU"
 //  var videoId = data.trailer.replace("https://youtu.be/", "");
 
-    $('#videoPlayer').html("<iframe width='900' height='580' src='https://www.youtube.com/embed/" + vidId + "' frameborder='0' allowfullscreen>");
+//  Embed YouTube video player
+    $('#videoPlayer1').html("<iframe width='900' height='580' src='https://www.youtube.com/embed/" + vidId + "' frameborder='0' allowfullscreen>");
+
+//  Embed Vimeo video player
+    $('#videoPlayer2').html('<iframe src="http://player.vimeo.com/video/62983426?title=1&amp;byline=1&amp;portrait=1" width="900" height="580" frameborder="0" allowfullscreen></iframe>');
+
+/*
+// display comic info function
+    function displayComicInfo() {
+    // grabbing user input
+        debugger;
+        var characterName = $('#characterSearch').val();
+        console.log(characterName);
+
+    // Variables needed for the hash
+        var ts = new Date().getTime(); 
+        var PRIV_KEY = "3499aabd8ee3bb9d5eecc7291c61677eb88ed4f6"
+        var API_KEY = "665fa53043b7e63a68ee728c296f464a";
+        var hash = CryptoJS.MD5(ts+PRIV_KEY + API_KEY).toString();
+
+    // apikey for the end of the url
+        var apiKey = "665fa53043b7e63a68ee728c296f464a";
+
+    // url to pass through the ajax call
+        var url = "https://gateway.marvel.com/v1/public/characters?name=Wolverine&ts=" + ts + "&hash=" + hash + "&apikey=" + apiKey;
+        console.log(url);
+
+    // ajax call
+        $.ajax({ url: url, method: "GET" }).done(function(data) {
+            var refinedResults = data.data.results[0];
+            console.log(characterName); 
+            console.log(refinedResults); 
+    
+         });
+      }
+
+    displayComicInfo();
+
+    $('#characterSubmit').on('click', function(){
+        displayComicInfo();
+      });
+
+    });
+
+*/
 
 
+/*
+var AES = require("crypto-js/aes");
+var SHA256 = require("crypto-js/sha256");
+console.log(SHA256("Message"));
+var CryptoJS = require("crypto-js");
+console.log(CryptoJS.HmacSHA1("Message", "Key"));
 
+var cryptoBrowserify = require("crypto-browserify");
+
+// you will also have to setup the referring domains on your marvel developer portal
+var PRIV_KEY = "40635f573fbcebf38554244d0cbccb088c4dc5f1";
+var PUBLIC_KEY = "61c13c71ff114a82ab22fefdae73ef45";
+
+// the api deals a lot in ids rather than just the strings you want to use
+  var characterId = '1009718'; // wolverine  
+
+  var queryURL = "http://gateway.marvel.com:80/v1/public/comics/search?q=" + characterId + "&public_key=61c13c71ff114a82ab22fefdae73ef45";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(function(response) {
+        console.log(response);
+    });
+
+function getMarvelResponse() {
+
+  // you need a new ts every request                                                                                    
+  var ts = new Date().getTime();
+  var hash = CryptoJS.MD5(ts + PRIV_KEY + PUBLIC_KEY).toString();                                                           
+
+  var url = 'http://gateway.marvel.com:80/v1/public/comics';
+
+  console.log(url);
+  $.getJSON(url, {
+    ts: ts,
+    apikey: PUBLIC_KEY,
+    hash: hash,
+    characters: characterId
+    })
+    .done(function(data) {
+      // sort of a long dump you will need to sort through
+      console.log(data);
+    })
+    .fail(function(err){
+      // the error codes are listed on the dev site
+      console.log(err);
+    });
+};
+
+getMarvelResponse();
+*/
+
+/*
+      var results = $(response.data);
+      console.log(results);
+
+      $(document).on("click", ".newTopic", showGifs);
+*/
   </script>
     
   </div>
