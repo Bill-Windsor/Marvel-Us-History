@@ -7,28 +7,18 @@ var image = ["Hi Res Movie Posters/iron-man1.jpg", "Hi Res Movie Posters/Thor-Ra
  "Hi Res Movie Posters/doctor strange.jpg","Hi Res Movie Posters/captain america winter soldier.jpg",
  "Hi Res Movie Posters/guardians of the galaxy 2.jpg","Hi Res Movie Posters/ant-man1.jpg"];
 
-// var movieOrder = ["movie1", "movie2", "movie3", "movie4", "movie5", "movie6", "movie7", "movie8", "movie9", "movie10"];
 
 // Event listener for all button elements
 $(document).on("click", ".movies", function() {
-    // In this case, the "this" keyword refers to the button that was clicked
+    // In this case, the "this" keyword refers to the movie that was clicked
     var movieName = $(this).attr("data-movie");
     console.log(this);
     var movieYear = $(this).attr("data-year");
     console.log(this);
     var moviePoster = $(this).attr("data-index");
     console.log(this);
-
-// // When movie link is clicked, initiate function
-// $(".movies").on("click", function() {
-  // Select movieName and movieYear values of element and save as variables
-  // var movieName = $(".movies").data("movie");
- //  var movieYear = $(".movies").data("year");
- //  var moviePoster = $(".movies").data("index");
-  
-
-
-    // queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=marvel%2Bentertainment%2Bant-man%2B2015%2Btrailer&key=AIzaSyB4rtuN_4efJMjoyz9Zm9ydFBijgFocjV4";
+    var movieReview = $(this).attr("value");
+    console.log(this);
 
     // Plug movieName and movieYear into queryUrl variable
     queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=marvel%2Bentertainment%2B" + movieName + "%2B" + movieYear + "%2Btrailer&key=AIzaSyB4rtuN_4efJMjoyz9Zm9ydFBijgFocjV4";
@@ -59,15 +49,42 @@ $(document).on("click", ".movies", function() {
       $("#poster2").html("<image src='" + hiRes + "' width='350px'>");
 
       $("#poster").css("margin-left", "30%");
-      $("#poster2").css("margin-left", "30%");
+      });
+
+
+    queryURL2 = "https://www.omdbapi.com/?t=" + movieReview + "&y=&plot=short&apikey=40e9cece";
+
+
+    $.ajax({
+      url: queryURL2,
+      method: "GET"
+    }).done(function(response) {
+      console.log(response);
+      console.log(response.Plot);
+
+      console.log(response.Ratings[0].Source);
+      console.log(response.Ratings[0].Value);
+
+      var synopsis = response.Plot;
+      var critic0 = response.Ratings[0].Source;
+      var critic1 = response.Ratings[1].Source;
+      var critic2 = response.Ratings[2].Source;
+      var ratings0 = response.Ratings[0].Value;
+      var ratings1 = response.Ratings[1].Value;
+      var ratings2 = response.Ratings[2].Value;
+
+   
+      $("#plot").html("<p></p><br><p></p><br><p></p>");
+
+      $("#plot p:nth-child(1)").html("<h3>Synopsis:</h3> " + synopsis + "");
+      $("#plot p:nth-child(3)").html("<h3>Reviews:</h3> " + "<h5>" + critic0 + ":</h5>" + "<h5>" + ratings0 + 
+        "</h5><br>" + "<h5>" + critic1 + ":</h5>" + "<h5>" + ratings1 + 
+        "</h5><br>" + "<h5>" + critic2 + ":</h5>" + "<h5>" + ratings2 + "</h5>");
+
+      $("#plot").css("margin-left", "5%");
+      $("#plot").css("margin-right", "5%");
       
-
-      // Capture
-      // var movieDiv = $('<div class="movieDiv">');
-
-      // var image = $('<img>').attr("src", response.Poster);
-      //           movieDiv.append(image);
-    
+      
     });
   // 
 })
