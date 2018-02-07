@@ -134,8 +134,8 @@
 
 <!-- Search Bar In-Line -->
           <form class="navbar-form push-left" role="search">
-              <input type="text" class="form-control" placeholder="Search">
-            <button type="submit" class="btn btn-default">Submit</button>
+              <input type="text" id="characterInput" class="form-control" placeholder="Search">
+            <button type="submit" id="inputButton" class="btn btn-default">Submit</button>
           </form>
 
 <!-- ".row" finish -->
@@ -193,20 +193,39 @@
       </div>
     </div>
 
+    <!-- BOOTSTRAP MODAL -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title"><title></title></h4>
+          </div>
+          <!-- <div class="modal-body"> -->
+            <!-- <p>Please Enter a Valid Marvel Character&hellip;</p> -->
+          <!-- </div> -->
+          <div class="modal-footer">
+            <p id="modalComment">Hulk Smash! Quick, enter a Marvel character before Hulk comes to smash you!&hellip;</p>
+            <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     
     <div class="col-md-3">
         <!-- <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> -->
         <!-- This is a button!<span class="caret"></span></button> -->
 
-       <aside id="character_bio">
-          <h4>Character Bio and Synopsis</h4> <br>
+       <aside id="character_bio" class="scroll">
+          <!-- <h4>Character Bio and Synopsis</h4> <br>
           <h4>Character reference information here</h4> <br>
           <img src="images/jeangrey1.jpg" width="200px" height="200px"/> <br>
           <ul style="margin-left: 15px;">
              <li><b>Placeholder #1</b></li> <br>
              <li><b>Placeholder #2</b></li> <br>
              <li><b>Placeholder #3</b></li> <br>
-          </ul>
+          </ul> -->
         </aside>
     </div>
     <!--   <h3><a href="#" target="_blank" onmouseover="this.style.color = 'green';" onmouseout="this.style.color = 'purple';"> <b>Tickets to Meet Your Superhero at ComicCon</b> </a> </h3> <br>
