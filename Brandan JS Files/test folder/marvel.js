@@ -21,8 +21,8 @@ $(document).on("click", ".movies", function() {
 
 // // When movie link is clicked, initiate function
 // $(".movies").on("click", function() {
-	// Select movieName and movieYear values of element and save as variables
-	// var movieName = $(".movies").data("movie");
+  // Select movieName and movieYear values of element and save as variables
+  // var movieName = $(".movies").data("movie");
  //  var movieYear = $(".movies").data("year");
  //  var moviePoster = $(".movies").data("index");
   
@@ -56,7 +56,11 @@ $(document).on("click", ".movies", function() {
 
       // 
       $("#poster").html("<image src='" + hiRes + "' width='350px'>");
-      $("#poster").css("margin", "0 auto");
+      $("#poster2").html("<image src='" + hiRes + "' width='350px'>");
+
+      $("#poster").css("margin-left", "30%");
+      $("#poster2").css("margin-left", "30%");
+      
 
       // Capture
       // var movieDiv = $('<div class="movieDiv">');
@@ -65,5 +69,5 @@ $(document).on("click", ".movies", function() {
       //           movieDiv.append(image);
     
     });
-	// 
+  // 
 })
