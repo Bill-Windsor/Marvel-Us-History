@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Marvel Characters!</title>
+
+<!--  Bootstrap and Custom Style Sheet -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap1.css">
+<link rel="stylesheet" type="text/css" href="css/marvel_superheroes_style.css">
+
+    <!-- Bootstrap: Latest Compiled and Minified CSS
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        ** Bootstrap: Optional theme 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        ** Placeholder for Google Fonts reference:
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    -->
+<!-- Latest compiled and minified JavaScript and jQuery (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- More simplified jQuery reference
+    <script src="https://code.jquery.com/jquery.js"></script>
+    -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- For Customizing any Bootstrap JavaScript, we would use the link below instead: 
+    <script src="js/bootstrap.min.js"></script>
+    -->
+
+  <!-- Link to Moment.js -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <!-- Link to Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="page-header">
+         <h2 class="text-center">Marvel Superhero Database</h2>
+         <h3 class="text-center">Marvel Characters Image and Movie Reference</h3>
+      </div>
+
+      <div id="navBar1">
+
+<!-- col means column, md >=992px (Also use xs, sm and lg), and the 3 represents the size of the column
+3 * 4 = 12 (A 6 column layout would use 2 if they had equal size) -->
+      <div class="row">
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+  <!-- Drop Down Menus -->
+          <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Select a Marvel Superhero!
+          <!-- Display icon in button -->
+            <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Marvel Characters: Top 10</li>
+              <li><a data-name="Spider-Man" class="character" href="#">Spider-Man</a></li>
+              <li><a data-name="Captain America" class="character" href="#">Captain America</a></li>
+              <li><a data-name="Wolverine" class="character" href="#">Wolverine</a></li>
+              <li><a data-name="Daredevil" class="character" href="#">Daredevil</a></li>
+              <li><a data-name="Dr. Doom" class="character" href="#">Dr. Doom</a></li>
+              <li><a data-name="Magneto" class="character" href="#">Magneto</a></li>
+              <li><a data-name="Thor" class="character" href="#">Thor</a></li>
+              <li><a data-name="Incredible Hulk" class="character" href="#">Incredible Hulk</a></li>
+              <li><a data-name="Iron Man" class="character" href="#">Iron Man</a></li>
+              <li><a data-name="Cyclops" class="character" href="#">Cyclops</a></li>
+  <!-- Separator for menu list -->
+  <!-- <li role="separator" class="divider"></li>  -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Select a Marvel Superhero!
+          <!-- Display icon in button -->
+            <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Marvel Characters: #11-20</li>
+              <li><a data-name="The Thing" class="character" href="#">The Thing</a></li>
+              <li><a data-name="Deadpool" class="character" href="#">Deadpool</a></li>
+              <li><a data-name="Storm" class="character" href="#">Storm</a></li>
+              <li><a data-name="Hawkeye" class="character" href="#">Hawkeye</a></li>
+              <li><a data-name="Kitty Pryde" class="character" href="#">Kitty Pryde</a></li>
+              <li><a data-name="Nightcrawler" class="character" href="#">Nightcrawler</a></li>
+              <li><a data-name="Captain Marvel" class="character" href="#">Captain Marvel</a></li>
+              <li><a data-name="She-Hulk" class="character" href="#">She-Hulk</a></li>
+              <li><a data-name="Dr. Strange" class="character" href="#">Dr. Strange</a></li>
+              <li><a data-name="Jean Grey" class="character" href="#">Jean Grey</a></li>
+            </ul>
+          </div>
+        </div>
+
+<!-- Clearfix div (if necessary for responsive design)
+    <div class="clearfix visible-sm"></div>   -->
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Select a Marvel Top-10 Movie
+          <!-- Display icon in button -->
+            <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+              <!-- Unselectable header -->
+              <li class="dropdown-header">Marvel Movies: Top 10</li>
+              <li><a href="#"> 1. The Avengers</a></li>              
+              <li><a href="#"> 2. Iron Man</a></li>
+              <li><a href="#"> 3. Guardians of the Galaxy</a></li>
+              <li><a href="#"> 4. Captain America: Winter Soldier</a></li>
+              <li><a href="#"> 5. Spider-Man 2</a></li>
+              <li><a href="#"> 6. Captain America: Civil War</a></li>
+              <li><a href="#"> 7. X2: X-Men United</a></li>
+              <li><a href="#"> 8. Spider-Man</a></li>
+              <li><a href="#"> 9. X-Men: Days of Future Past</a></li>
+              <li><a href="#">10. X-Men: First Class</a></li>
+            </ul>
+          </div>
+        </div>
+
+<!-- Search Bar In-Line -->
+          <form class="navbar-form push-left" role="search">
+              <input type="text" class="form-control" id="characterInput" placeholder="Search">
+            <button type="submit" class="btn btn-default" id="inputButton">Submit</button>
+          </form>
+
+<!-- ".row" finish -->
+    </div>
+  </ul>
+
+  <div class="row">
+
+<!-- Carousel -->
+<!-- Surround everything with a div with the class carousel slide -->
+    <div class="col-md-7">
+      <div id="theCarousel" class="carousel slide" data-ride="carousel">
+       
+        <!-- Define how many slides to put in the carousel -->
+        <ol class="carousel-indicators">
+          <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+          <li data-target="#theCarousel" data-slide-to="1"> </li>
+          <li data-target ="#theCarousel" data-slide-to="2"> </li>
+        </ol >
+       
+         <div class="carousel-inner">
+
+             <div class="item active" >
+               <div class ="slide1"></div>
+               <div class="carousel-caption">
+                  <h1 id="marvel1">Superhero #1</h1>
+                  <!-- <p>Dynamic Image Here</p>
+                  <p><a href="#" class="btn btn-primary btn-lg" id="charSelect1">View Character</a></p> -->
+               </div>
+            </div>
+            <div class="item">
+               <div class="slide2"></div>
+               <div class="carousel-caption">
+                  <h1>Superhero #2</h1>
+                <!--   <p>Fantastic Image Here</p> -->
+                 <!--  <p><a href="#" class="btn btn-primary btn-lg" id="charSelect2">View Character</a></p> -->
+               </div>
+            </div>
+            <div class="item">
+               <div class="slide3"></div>
+                  <div class="carousel-caption">
+                  <h1>Superhero #3</h1>
+                  <!-- <p>Amazing Image Here</p>
+                  <p><a href="#" class="btn btn-primary btn-lg" id="charSelect3">View Character</a></p> -->
+               </div>
+            </div>
+         </div>
+
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"> </span>
+        </a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+
+<!-- BOOTSTRAP MODAL -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><title></title></h4>
+      </div>
+      <!-- <div class="modal-body"> -->
+        <!-- <p>Please Enter a Valid Marvel Character&hellip;</p> -->
+      <!-- </div> -->
+      <div class="modal-footer">
+        <p id="modalComment">Hulk Smash! Quick, enter a Marvel character before Hulk comes to smash you!&hellip;</p>
+        <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <div class="col-md-5">
+      <aside id="character_bio" class="scroll">
+        <!-- <h4 id="characterName">Character Bio and Synopsis</h4>
+        <p id="realName"></p>
+        <p id="birthDate"></p> --> 
+      <!-- <div id="description"></div><br> -->
+      </aside>
+    </div>
+    <!--   <h3><a href="#" target="_blank" onmouseover="this.style.color = 'green';" onmouseout="this.style.color = 'purple';"> <b>Tickets to Meet Your Superhero at ComicCon</b> </a> </h3> <br>
+      </aside>  
+
+        <h4><a href="#userComm4" data-toggle="collapse">Column 2</a></h4>
+        <div id="userComm4" class="collapse in">Quisque rutrum augue odio, eu placerat diam bibendum id. Donec at fringilla leo, non varius magna. Vestibulum finibus, lacus at gravida condimentum, tellus mauris imperdiet orci, a pretium justo nulla sit amet nunc. Class aptent taciti sociosqu ad litora torquent per conubia.</div>
+ -->
+
+
+  <!-- ".row" finish -->  
+    </div>
+
+  <br clear="all" />
+
+ <div id="userComm2"> 
+    <h4>Form control -- two input options below:</h4>
+
+    <div id="userComm3">
+       <form>
+          <div class="form-group">
+             <label for="character-input">Request a Marvel Character:</label>
+             <input type="text" class="form-control" id="character-input">
+           </div>
+       </form>
+       <form>
+          <div class="form-group">
+             <label for="character-input">Second request category (if supported):</label>
+             <input type="text" class="form-control" id="action-input">
+          <!-- Button triggers new character name to be added -->
+          <input id="add-character" type="submit" value="Submit">
+          </div>
+        </form>
+    </div>
+  </div>
+
+  <br clear="all" /> 
+ 
+  <div id="image_gallery"> 
+    <h4>Display Character Images Here</h4>
+    <div display: inline-block>
+      <img src="images/captainmarvel1.jpg" class="scaled" width="250" height="170"/>
+      <img src="images/jeangrey1.jpg" class="scaled" width="250" height="170"/>
+      <img src="images/kittypryde1.jpg" class="scaled" width="250" height="170"/>
+      <img src="images/magneto1.jpg" class="scaled" width="250" height="170"/>
+      <img src="images/storm1.jpg" class="scaled" width="250" height="170"/>
+    </div>
+  </div> <br>
+
+  <!-- Well for YouTube video player -->
+    <div id="videoPlayer1"></div>
+
+  <!-- Well for Vimeo video player -->
+    <div id="videoPlayer2"></div>
+
+  <div class="topCharacter"></div>
+  <div class="topCount"></div>
+
+
+  <!-- Load Vimeo video player API -->
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+
+<script type="text/javascript" src="js/config.js" ></script>
+  <!-- Initiate JavaScript program -->
+<script type="text/javascript" src="js/app_joel.js"></script>    
+
+  </div>
+</body>
+</html>
