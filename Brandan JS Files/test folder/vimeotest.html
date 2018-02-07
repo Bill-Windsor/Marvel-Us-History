@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Movies</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Basic Table</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Movie Name</th>
+          <th>Year</th>
+          <th>Actors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- Example Movie 1 -->
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <!-- Example Movie 2 -->
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <!-- Example Movie 3 -->
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <script type="text/javascript">
+
+//     // you will also have to setup the referring domains on your marvel developer portal
+// var PRIV_KEY = "14541e49a6648a66100b5b2184812a49";
+// var PUBLIC_KEY = "aff033a01ff4b89484f4edbc2d6438174e57bdc9s";
+
+// function getMarvelResponse() {
+
+//   // you need a new ts every request                                                                                    
+//   var ts = new Date().getTime();
+//   var hash = CryptoJS.MD5(ts + PRIV_KEY + PUBLIC_KEY).toString();
+  
+//   // the api deals a lot in ids rather than just the strings you want to use
+//   var characterId = '1009718'; // wolverine                                                                             
+
+
+//   var url = 'http://gateway.marvel.com:80/v1/public/comics';
+
+//   console.log(url);
+//   $.getJSON(url, {
+//     ts: ts,
+//     apikey: PUBLIC_KEY,
+//     hash: hash,
+//     characters: characterId
+//     })
+//     .done(function(data) {
+//       // sort of a long dump you will need to sort through
+//       console.log(data);
+//     })
+//     .fail(function(err){
+//       // the error codes are listed on the dev site
+//       console.log(err);
+//     });
+// };
+
+// getMarvelResponse();
+
+// queryURL = "https://gateway.marvel.com:443/v1/public/characters?name=magneto&limit=25&apikey=aff033a01ff4b89484f4edbc2d6438174e57bdc9";
+
+   // Sample js code for search.list
+
+// See full sample for buildApiRequest() code, which is not 
+// specific to a particular API or API method.
+
+// buildApiRequest('GET',
+//                 '/youtube/v3/search',
+//                 {'maxResults': '25',
+//                  'part': 'snippet',
+//                  'q': 'marvel%2Bentertainment',
+//                  'type': ''});
+
+    // movieName = "the+lion+king";
+    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=marvel%2Bentertainment%2Biron%2Bman%2Btrailer&key=AIzaSyB4rtuN_4efJMjoyz9Zm9ydFBijgFocjV4";
+
+    // "https://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=40e9cece";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(function(response) {
+      console.log(response);
+
+    // // movieName = "the+lion+king";
+    // queryURL = "https://gateway.marvel.com:443/v1/public/characters?name=magneto&limit=25&apikey=aff033a01ff4b89484f4edbc2d6438174e57bdc9";
+
+    // // "https://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=40e9cece";
+
+    // $.ajax({
+    //   url: queryURL,
+    //   method: "GET"
+    // }).done(function(response) {
+    //   console.log(response);
+
+      // // Getting the third row of the table
+      // var thirdRowTds = $("table")
+      //   .children()
+      //   .eq(1)
+      //   .children("tr")
+      //   .eq(2)
+      //   .children("td");
+
+      // // Setting text of the thirdRowTds
+      // thirdRowTds.eq(0).text(response.Title);
+
+      // thirdRowTds.eq(1).text(response.Year);
+
+      // thirdRowTds.eq(2).text(response.Actors);
+    });
+
+
+  </script>
+  <button id="execute-request-button">Authorize</button>
+
+<!-- <script async defer src="https://apis.google.com/js/api.js" 
+        onload="this.onload=function(){};handleClientLoad()" 
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script> -->
+</body>
+
+</html>
