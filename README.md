@@ -10,20 +10,21 @@ Marvel has been around since 1939(Formerly known as Timely Comics). Since then a
 ##(Screenshot here)
 
 ## How it works
+* The Marvel-Us app pulls its movie trailers from Youtube's API and synopsis and movie critiques from OMDB API. 
+* Comic book character images storyline is pulled from Comic Vine's API.
+* Jquery makes the API calls to find the targetted Movie or comic book character data and render's it on the browser's document.
+* Information from the most popular Marvel characters throughout stored in Google Docs is processed by KnightLab and rendered as a  
+  timeline on the document.
 
-
-## Dependencies
+## Deployment
+(Add deployed link here)
 
 ## Libraries Used
 [jQuery](https://jquery.com/)
-[Chart.js](http://www.chartjs.org/)
 [Bootstrap](https://getbootstrap.com/)
 
-##Authors
+## Authors
 * **Bill Windsor** - Frontend: *CSS, Bootstrap, Coordinator*
 * **Michael Thompson** - Frontend: *Concept, CSS, Bootstrap*
 * **Brandan Richardson** - Backend: *JS, API calls*
 * **Joel Hernandez** - Backend: *JS, API calls*
-
-##Acknowledgments
-*
