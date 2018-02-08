@@ -118,6 +118,16 @@ body {
   background-color: #66CCCC;
   margin: 0px 0px 0px 0px 0px;
   padding: 10px 10px 10px 10px;
+  color: white !important;
+}
+
+#plot {
+  color: white !important;
+}
+
+#character-display {
+  color: white !important;
+
 }
 
 #navBar1 {
@@ -214,5 +224,9 @@ img.skewed:hover {
   overflow-y: scroll; /* Add vertical scrollbar */
 /*  overflow: auto;
 */}
+
+#carousel {
+  margin-bottom: 10px;
+}
 
 

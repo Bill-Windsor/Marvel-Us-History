@@ -88,6 +88,8 @@ $(document).ready(function() {
 
                 $(".slide1").html("<img class='img-responsive' src=" + characterImage + " width=400" + "></img>");
                 $(".slide1").css("margin-left", "25%");
+                $(".slide1").css("background-image", "url('../images/space_background_image_2.jpg");
+
             }//Closing if loop
         });//Closing promise
     });//Closing on click button function
@@ -216,7 +218,7 @@ $(document).on("click", ".movies", function() {
       var ratings2 = response.Ratings[2].Value;
 
       // Dynamically create <p> and <br> elements to inner HTML in slide #3 of carousel
-      $("#plot").html("<p></p><br><p></p><br><p></p>");
+      $("#plot").html("<p class='text-warning'></p><br><p class='text-warning'></p><br><p></p>");
 
       // Dynamically fill <p> and <br> elements  with synopsis and movie review in from our variables
       $("#plot p:nth-child(1)").html("<h3>Synopsis:</h3> " + synopsis + "");

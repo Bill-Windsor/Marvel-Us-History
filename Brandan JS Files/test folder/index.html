@@ -10,24 +10,11 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/marvel_superheroes_style.css">
 
-    <!-- Bootstrap: Latest Compiled and Minified CSS
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        ** Bootstrap: Optional theme 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        ** Placeholder for Google Fonts reference:
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
-    -->
-
 <!-- Latest compiled and minified JavaScript and jQuery (CDN) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- More simplified jQuery reference
-    <script src="https://code.jquery.com/jquery.js"></script>
-    -->
 
+<!-- Link to Bootstrap CDN -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- For Customizing any Bootstrap JavaScript, we would use the link below instead: 
-    <script src="js/bootstrap.min.js"></script>
-    -->
 
   <!-- Link to Moment.js -->
 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -151,7 +138,7 @@
 
 <!-- Carousel -->
 <!-- Surround everything with a div with the class carousel slide -->
-    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+    <div id="carousel" class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
       <div id="theCarousel" class="carousel slide" data-ride="carousel">
        
         <!-- Define how many slides to put in the carousel -->
@@ -185,11 +172,10 @@
       </div>
     </div>
 
-    <aside id="character_bio"  class="col-lg-3 col-md-3 col-sm-12 col-xs-12 scroll  ">
+    <aside id="character_bio"  class="col-lg-3 col-md-3 col-sm-12 col-xs-12 scroll text-info">
       <h4 id="characterName">Character Bio and Synopsis</h4>
       <p id="realName"></p>
       <p id="birthDate"></p> 
-<!--  <p id="description">Character reference information here</p> <br> -->
     </aside>
 
 <!-- BOOTSTRAP MODAL -->
@@ -214,22 +200,6 @@
   <!-- ".row" finish -->  
     </div>
 
-
-    <!-- <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-
-    <h3><a href="#" target="_blank" onmouseover="this.style.color = 'green';" onmouseout="this.style.color = 'purple';"> <b>Tickets to Meet Your Superhero at ComicCon</b> </a> </h3>
-
-    <h4><a href="#userComm4" data-toggle="collapse">Column 2</a></h4>
-    <div id="userComm4" class="collapse in">Quisque rutrum augue odio, eu placerat diam bibendum id. Donec at fringilla leo, non varius magna. Vestibulum finibus, lacus at gravida condimentum, tellus mauris imperdiet orci, a pretium justo nulla sit amet nunc. Class aptent taciti sociosqu ad litora torquent per conubia.</div>
-
-
-    <a href="https://www.youtube.com/watch?v=LWQbuJ24Wzg" target="_blank" onmouseover="this.style.color = 'green';" onmouseout="this.style.color = 'purple';">
-     Video of Andrea Bocelli and Sarah Brightman </a>
-    <br><br>
-
-    <a href="https://www.youtube.com/watch?v=LWQbuJ24Wzg" target="_blank"><img src="Andrea_Bocelli_and_Sarah_Brightman_Concert.jpg" height="470" width="560" alt="Andrea Bocelli and Sarah Brightman performing"/></a>
- -->
-
   <br clear="all" /> 
  
    <div class="row">
@@ -249,7 +219,7 @@
  
      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <div id="userComm2" class="card">
-          <div class="card-body">
+          <div id="character-display" class="card-body">
             <h4>Last 10 Character Searches</h4>
           </div>
         </div>
@@ -264,239 +234,6 @@
 
 
   <script type="text/javascript" src="marvel.js">
-
-
-/*
-  <!-- Well for YouTube video player -->
-    <div id="videoPlayer1"></div>
-
-  <!-- Well for Vimeo video player -->
-    <div id="videoPlayer2"></div>
-
-  <!-- Load Vimeo video player API -->
-<script src="https://player.vimeo.com/api/player.js">
-*/
-
-/*
-$(document).ready(function() {
-console.log("document loaded");
-
-
-//  "Marvel Avengers Infinity War" Movie Trailer
-//  var trailer = "https://www.youtube.com/watch?v=gbK2U4gO4vU"
-    var movieName = $("").val();
-    var movieYear = $("").val();
-    var vidId = "gbK2U4gO4vU"
-
-//  Embed YouTube video player
-    $('#videoPlayer1').html("<iframe width='900' height='580' src='https://www.youtube.com/embed/" + vidId + "' frameborder='0' allowfullscreen>");
-
-//  Embed Vimeo video player
-    $('#videoPlayer2').html('<iframe src="http://player.vimeo.com/video/62983426?title=1&amp;byline=1&amp;portrait=1" width="900" height="580" frameborder="0" allowfullscreen></iframe>');
-
-  });
-
-
-
-
-    function modal() {
-        $('#myModal').modal('show');
-    }
-
-    $("#inputButton").on("click", function() {
-        //Prevents the document from reloading
-        event.preventDefault();
-
-        //Global variables
-        var mykey = config.MY_KEY;
-        var comicName = $("#characterInput").val().trim();
-
-        $("#characterInput").text("");
-
-        var queryURL = "https://comicvine.gamespot.com/api/characters/?api_key=" + mykey + "&filter=name:" + comicName + "&limit=100&format=json";
-        
-        // var queryURL = "https://comicvine.gamespot.com/api/series_list/?api_key=" + apiKey + "&format=json";
-        var proxy = 'https://cors-anywhere.herokuapp.com/';
-            
-        //Boolean variable for character matching
-        var charFound = false;
-
-        //Boolean variable for publisher matching
-        var isMarvel = false;
-
-        //AJAX API call to ComicVine    
-        $.ajax({
-          url: proxy + queryURL,
-          method: 'GET'
-        }).done(function(response) {
-          console.log(response.results);
-
-            for (var i = 0; i < response.results.length; i++) {
-                // debugger;
-                var character = response.results[i];
-                // console.log(character);
-                //Targets character key
-                var characterName = character.name; 
-                
-                //Targets publisher key
-                var characterPublisher = character.publisher;
-                
-                var characterImage = character.image.original_url;
-                // console.log(characterImage);
-                
-                //Targets publisher name key
-                var publisherName = characterPublisher.name;   
-                
-                //Lower cases the returned string 
-                var lcCharacterName = characterName.toLowerCase();
-                // console.log(lcCharacterName);
-                
-                //Lower cases the user input string
-                var lcComicName = comicName.toLowerCase();
-                console.log(lcComicName);
-                
-                //Assigns the response id value to originId
-                var originId = response.results[i].id;
-
-                if (lcCharacterName === lcComicName) {     
-                    charFound = true;
-                    break;
-                }
-            }
-            
-            if (charFound) {
-                 if (publisherName === "Marvel") {
-                    isMarvel = true;
-                }
-                 else {
-                   modal();
-                }
-            }
-            console.log(characterImage);
-            if (isMarvel) {
-                $("#characterName").text("Character Name: " + characterName);
-                //Add name to slide 1
-                $("#marvel1").text(characterName);
-                $("#realName").text("Real Name: " + character.real_name);
-                $("#birthDate").text("Birth Date: " + character.birth);
-                // $("#description").html("<div>" + character.description + "</div>");
-                $("#character_bio").append("<div>" + character.description + "</div>");
-                // $(".slide1").css("background-image", "url(characterImage)");
-                $(".slide1").html("<img src=" + characterImage + " height=" + 500 + " width=" + 806.25 + "></img>");
-            }
-        });
-    });
-});
-
-//ALTERNATIVE ALIAS CODE
-// console.log(lcComicName);
-            // var characterAlias = response.results[i].aliases;    
-
-            // var lcCharacterAlias = characterAlias.toLowerCase();
-
-            // var enter = '\n';
-
-            // var arrayOfAlias = lcCharacterAlias.split(enter);
-            
-            // var index = arrayOfAlias.indexOf(comicName)
-
-
-
-
-
-/*
-// display comic info function
-    function displayComicInfo() {
-    // grabbing user input
-        debugger;
-        var characterName = $('#characterSearch').val();
-        console.log(characterName);
-
-    // Variables needed for the hash
-        var ts = new Date().getTime(); 
-        var PRIV_KEY = "3499aabd8ee3bb9d5eecc7291c61677eb88ed4f6"
-        var API_KEY = "665fa53043b7e63a68ee728c296f464a";
-        var hash = CryptoJS.MD5(ts+PRIV_KEY + API_KEY).toString();
-
-    // apikey for the end of the url
-        var apiKey = "665fa53043b7e63a68ee728c296f464a";
-
-    // url to pass through the ajax call
-        var url = "https://gateway.marvel.com/v1/public/characters?name=Wolverine&ts=" + ts + "&hash=" + hash + "&apikey=" + apiKey;
-        console.log(url);
-
-    // ajax call
-        $.ajax({ url: url, method: "GET" }).done(function(data) {
-            var refinedResults = data.data.results[0];
-            console.log(characterName); 
-            console.log(refinedResults); 
-    
-         });
-      }
-
-    displayComicInfo();
-
-    $('#characterSubmit').on('click', function(){
-        displayComicInfo();
-      });
-
-    });
-
-*/
-
-
-/*
-var AES = require("crypto-js/aes");
-var SHA256 = require("crypto-js/sha256");
-console.log(SHA256("Message"));
-var CryptoJS = require("crypto-js");
-console.log(CryptoJS.HmacSHA1("Message", "Key"));
-
-var cryptoBrowserify = require("crypto-browserify");
-
-// you will also have to setup the referring domains on your marvel developer portal
-var PRIV_KEY = "40635f573fbcebf38554244d0cbccb088c4dc5f1";
-var PUBLIC_KEY = "61c13c71ff114a82ab22fefdae73ef45";
-
-// the api deals a lot in ids rather than just the strings you want to use
-  var characterId = '1009718'; // wolverine  
-
-  var queryURL = "http://gateway.marvel.com:80/v1/public/comics/search?q=" + characterId + "&public_key=61c13c71ff114a82ab22fefdae73ef45";
-
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).done(function(response) {
-        console.log(response);
-    });
-
-function getMarvelResponse() {
-
-  // you need a new ts every request                                                                                    
-  var ts = new Date().getTime();
-  var hash = CryptoJS.MD5(ts + PRIV_KEY + PUBLIC_KEY).toString();                                                           
-
-  var url = 'http://gateway.marvel.com:80/v1/public/comics';
-
-  console.log(url);
-  $.getJSON(url, {
-    ts: ts,
-    apikey: PUBLIC_KEY,
-    hash: hash,
-    characters: characterId
-    })
-    .done(function(data) {
-      // sort of a long dump you will need to sort through
-      console.log(data);
-    })
-    .fail(function(err){
-      // the error codes are listed on the dev site
-      console.log(err);
-    });
-};
-
-getMarvelResponse();
-*/
 
   </script>
     
