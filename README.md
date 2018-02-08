@@ -20,7 +20,7 @@ Marvel has been around since 1939(Formerly known as Timely Comics). Since then a
 (Add deployed link here)
 
 ## Libraries Used
-[jQuery](https://jquery.com/)
+[jQuery](https://jquery.com/) and
 [Bootstrap](https://getbootstrap.com/)
 
 ## Authors
