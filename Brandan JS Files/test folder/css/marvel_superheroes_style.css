@@ -23,7 +23,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 aside {
-      background-image: url("../images/gold.jpg");
+      background-image: url("../images/sunburst.jpg");
 
 }
 
@@ -43,7 +43,7 @@ body {
   vertical-align: middle;
   padding: 10px 10px 10px 10px;
   margin: 0px 0px 0px 0px;
-  border-bottom: 1px solid #eee;
+  /*border-bottom: 1px solid #eee;*/
 }
 
 #top_header {
@@ -55,7 +55,7 @@ body {
    font-style: italic;
    background-color: lightyellow;
 
-   border: 2px solid blue;
+   /*border: 2px solid blue;*/
    margin: 2px 2px 0px 2px;
    padding: 10px 20px 10px 20px;
 }
@@ -78,7 +78,7 @@ body {
 }
 
 #userCharacterRequest {
-  color: darkblue;
+  color: black;
 }
 
 /* Carousel Styling */
@@ -114,7 +114,7 @@ body {
   float: left;
   font-style: bold;
   height: 600px;
-  border: 3px solid darkred;
+  border: 3px solid gray;
   background-color: #66CCCC;
   margin: 0px 0px 0px 0px 0px;
   padding: 10px 10px 10px 10px;
@@ -131,7 +131,7 @@ body {
 #userComm2 {
    font: bold 18px Georgia;
    color: midnightblue;
-   border: 1px solid red;
+   border: 1px solid gray;
    margin: 0px 20px 10px 20px;
    padding: 10px 0px 10px 10px;
 }
@@ -139,7 +139,7 @@ body {
 #userComm3 {
    font: bold 18px Georgia;
    color: darkred;
-   border: 1px solid red;
+   border: 1px solid gray;
    margin: 10px 20px 10px 20px;
    padding: 10px 0px 10px 10px;
 }
@@ -147,17 +147,17 @@ body {
 #userComm4 {
    font: bold 18px Georgia;
    color: black;
-   border: 1px solid red;
+   border: 1px solid gray;
    margin: 10px 10px 10px 10px;
    padding: 10px 10px 10px 0px;
 }
 
 #image_gallery {
     text-align: center;
-    width: 90%;
-    border: 3px solid darkblue;
+    width: 100%;
+    border: 3px solid gray
     font: bold 18px Georgia;
-    color: darkblue; 
+    /*color: darkblue; */
     margin: 10px 20px 10px 20px;
     padding: 0px 0px 10px 10px;
 }
@@ -173,8 +173,8 @@ body {
 }
 
 .scaled {
-  width: 250px;
-  height: 170px;
+  width: 200px;
+  height: 180px;
 }
 
 img.scaled:hover {

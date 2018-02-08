@@ -41,8 +41,8 @@
     <div class="container">
 
       <div class="page-header">
-         <h1 class="text-center">Marvel-Us History Database</h1>
-         <h4 class="text-center">Marvel Characters Image and Movie Reference</h4>
+         <h1 class="text-center text-warning">Marvel-Us History Database</h1>
+         <h4 class="text-center text-warning">Marvel Characters Image and Movie Reference</h4>
       </div>
 
       <div id="navBar1">
@@ -55,7 +55,7 @@
   <!-- Drop Down Menus -->
           <div class="dropdown">
 
-            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button class="btn btn-warning dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Select a Marvel Superhero!
           <!-- Display icon in button -->
             <span class="caret"></span>
@@ -82,7 +82,7 @@
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
           <div class="dropdown">
 
-            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button class="btn btn-warning dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Select a Marvel Superhero!
           <!-- Display icon in button -->
             <span class="caret"></span>
@@ -109,7 +109,7 @@
 
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
           <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button class="btn btn-warning dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Select a Marvel Top-10 Movie
           <!-- Display icon in button -->
             <span class="caret"></span>
@@ -133,10 +133,11 @@
 
 <!-- Search Bar In-Line -->
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-          <div class="dropdown" id="userCharacterRequest">Request a Marvel character here:
+          <div class="dropdown" id="userCharacterRequest">
+            <!-- Request a Marvel character here: -->
             <form class="navbar-form push-left" role="search">
-                <input type="text" class="form-control" id="characterInput" placeholder="Search">
-            <button type="submit" id="inputButton" class="btn btn-default">Submit</button>
+                <input type="text" class="form-control" id="characterInput" placeholder="Character Search">
+            <button type="submit" id="inputButton" class="btn btn-warning">Submit</button>
 
             </form>
           </div>
@@ -231,13 +232,11 @@
 
   <br clear="all" /> 
  
-  <div id="image_gallery"> 
-    <h4>Character Images Here</h4>
+  <div id="image_gallery" class="text-warning"> 
     <div display: inline-block>
       <img src="images/captainmarvel1.jpg" class="scaled"/>
       <img src="images/jeangrey1.jpg" class="scaled"/>
       <img src="images/kittypryde1.jpg" class="scaled"/>
-      <img src="images/magneto1.jpg" class="scaled"/>
       <img src="images/storm1.jpg" class="scaled"/>
     </div>
   </div> <br>
@@ -245,23 +244,10 @@
   <br clear="all" />
 
   <div id="userComm2"> 
-    <h4>Form control -- two input options below:</h4>
-
-    <div id="userComm3">
-       <form>
-          <div class="form-group">
-             <label for="character-input">Request a Marvel Character:</label>
-             <input type="text" class="form-control" id="character-input">
-           </div>
-       </form>
-       <form>
-          <div class="form-group">
-             <label for="character-input">Second request category (if supported):</label>
-             <input type="text" class="form-control" id="action-input">
-          <!-- Button triggers new character name to be added -->
-          <input id="add-character" type="submit" value="Submit">
-          </div>
-        </form>
+    <div class="card">
+      <div class="card-body text-warning">
+      <h4>Last 10 Character Searches</h4>
+      </div>
     </div>
   </div>
 
