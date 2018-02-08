@@ -7,8 +7,6 @@ Marvel has been around since 1939(Formerly known as Timely Comics). Since then a
 * Our app allows the user to make a search for the comic book character and read about their past and present
 * If you're a movie-goer and you want to know what the latest Marvels are all about? Our app has links to get you up to date.
 
-##(Screenshot here)
-
 ## How it works
 * The Marvel-Us app pulls its movie trailers from Youtube's API and synopsis and movie critiques from OMDB API. 
 * Comic book character images storyline is pulled from Comic Vine's API.
@@ -17,7 +15,7 @@ Marvel has been around since 1939(Formerly known as Timely Comics). Since then a
   timeline on the document.
 
 ## Deployment
-(Add deployed link here)
+https://github.com/yocodigo/Project-1
 
 ## Libraries Used
 [jQuery](https://jquery.com/) and
