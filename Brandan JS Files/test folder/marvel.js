@@ -86,7 +86,7 @@ $(document).ready(function() {
                     "<h5>Character Real Name: " + character.real_name + 
                     "</h5>" + "<h5>Character Bio and Synopsis:</h5>" + "<p>" + character.description + "</p>");
 
-                $(".slide1").html("<img src=" + characterImage + " width=400" + "></img>");
+                $(".slide1").html("<img class='img-responsive' src=" + characterImage + " width=400" + "></img>");
                 $(".slide1").css("margin-left", "25%");
             }//Closing if loop
         });//Closing promise
@@ -121,8 +121,10 @@ $.ajax({  //CORS
                 "<h5>Character Real Name: " + character2.real_name +
                 "</h5>" + "<h5>Character Bio and Synopsis:</h5>" + "<p><h5>" + character2.description + "</h5></p>");
                 
-                $(".slide1").html("<img src=" + characterImage2 + " width=400" + "></img>");
-                $(".slide1").css("margin-left", "25%");        }
+                $(".slide1").html("<img class='img-responsive' src=" + characterImage2 + " width=400" + "></img>");
+                $(".slide1").css("margin-left", "25%"); 
+                $(".slide1").css("background-image", "url('../images/space_background_image_2.jpg");
+       }
 
       );//Closing promise      
     });//Closing brace and parenthasis
@@ -136,7 +138,7 @@ var image = ["Hi Res Movie Posters/iron-man1.jpg", "Hi Res Movie Posters/Thor-Ra
 "Hi Res Movie Posters/Avengers1.jpg", "Hi Res Movie Posters/spiderman homecoming.jpg",
  "Hi Res Movie Posters/Guardians-of-the-Galaxy1.jpg", "Hi Res Movie Posters/captain_america_civil_war.jpg", 
  "Hi Res Movie Posters/doctor strange.jpg","Hi Res Movie Posters/captain america winter soldier.jpg",
- "Hi Res Movie Posters/guardians of the galaxy 2.jpg","Hi Res Movie Posters/ant-man1.jpg"];
+ "Hi Res Movie Posters/guardians of the galaxy 2.jpg","Hi Res Movie Posters/ant-man1.jpg", "Hi Res Movie Posters/iron-man-3.jpg"];
 
 
 // Event listener for all button elements
@@ -169,18 +171,23 @@ $(document).on("click", ".movies", function() {
       var vidId = response.items[0].id.videoId;
 
       // Plug vidId into embed video source code and then write to inner html in video player div
-      $('#video').html("<iframe width='825' height='532' src='https://www.youtube.com/embed/" + vidId + "' frameborder='0' allowfullscreen>");
+      $('#video').html("<iframe class='embed-responsive-item'  src='https://www.youtube.com/embed/" + vidId + "' frameborder='0' allowfullscreen>");
 
       // Capture value of movie poster images in the image array 
       var hiRes = image[moviePoster];
       console.log(hiRes);
 
       // Dynamically create image attribute with repective movie poster in slide #1 of carousel
-      $("#poster").html("<image src='" + hiRes + "' width='400px'>");
+      $("#poster").html("<image class='img-responsive' src='" + hiRes + "' width='400px'>");
       
       // dynamically move movie poster image in carousel #1 25% to the left to center it
       $("#poster").css("margin-left", "25%");
+      $("#poster").css("background-image", "url('../images/space_background_image_2.jpg");
+      $("#video").css("background-image", "url('../images/space_background_image_2.jpg");
+      // $("#character_bio").css("background-image", "url('../images/steel.jpg");
       });
+
+
 
     // Plug movieReview value into queryURL2 variable
     queryURL2 = "https://www.omdbapi.com/?t=" + movieReview + "&y=&plot=short&apikey=40e9cece";
@@ -220,7 +227,8 @@ $(document).on("click", ".movies", function() {
       // Increase the margin on the left and right of the <p> and <br> elements by 5%
       $("#plot").css("margin-left", "5%");
       $("#plot").css("margin-right", "5%");
-      
+      $("#plot").css("background-image", "url('../images/space_background_image_2.jpg");
+
       
     });
   // 

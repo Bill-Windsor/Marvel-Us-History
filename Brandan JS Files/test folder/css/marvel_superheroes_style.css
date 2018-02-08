@@ -19,6 +19,12 @@ h6      { font: bold 14px Georgia; }
 
 header, nav, section, article, aside, footer, hgroup {
    display: block;
+
+}
+
+aside {
+      background-image: url("../images/gold.jpg");
+
 }
 
 body { 
@@ -57,7 +63,7 @@ body {
 .container {
   width: 90%;
   height: 100%;
-  background: lightblue;
+  /*background: lightblue;*/
   margin: -10px 40px 0px 80px;
   padding: -5px 10px 10px 10px;
 }
@@ -77,21 +83,21 @@ body {
 
 /* Carousel Styling */
 .slide1{
-   background-image: url("../images/marvelSH1RS.png");
+   background-image: url("../images/avengershires1.jpg");
    height: 600px;
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
 }
 .slide2{
-   background-image: url("../images/marvel_superheroes_photo3.jpg");
+   background-image: url("../images/iron spider 2.png");
    height: 600px;
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
 }
 .slide3{
-   background-image: url("../images/marvel_avengers_photo5.jpg");
+   background-image: url("../images/thanos.jpg");
    height: 600px;
    background-repeat: no-repeat;
    background-position: center;
@@ -199,9 +205,10 @@ img.skewed:hover {
 }
 
 .scroll {
-  /* width: 290px; */
-  /* height: 410px;*/
+   width: 290px; 
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: scroll; /* Add vertical scrollbar */
-  /*overflow: auto;*/
-}
+/*  overflow: auto;
+*/}
+
+
