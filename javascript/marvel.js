@@ -115,14 +115,37 @@ $.ajax({  //CORS
           method: 'GET'
         }).done(function(response) {
                 
+                for (var i = 0; i < response.results.length; i++) {
+
                 //Assign the first target in the array to character2       
-                var character2 = response.results[0];
+                var character2 = response.results[i];
         
-                //Targets character key
+                //Assigns name property to variable
                 var characterName2 = character2.name; 
+
+                //Lower cases the characterName2
+                var lcCharacterName2 = characterName2.toLowerCase();
+
+                //Lower cases the value of the element  
+                var lcComicName2 = characterVal.toLowerCase();
                 
                 //Once a character is matched with the database, grab the
-                var characterImage2 = character2.image.original_url;
+                var characterImage2 = character2.image;
+
+                //Some character objects do not have images. To avoid a null error, we assign characterImage a blank string  
+                if (characterImage2 != null) {
+                    var characterImage2 = characterImage2.original_url;
+                }
+                else {
+                    var characterImage2 = "";
+                }
+
+                if (lcCharacterName2 === lcComicName2) {     
+                    //If they match, set charFound to true and break the loop
+                    charFound = true;
+                    break;
+                }
+            }//Closing loop brace
                 
                 //Display name, real name, description and image to DOC
                 $("#character_bio").html("<h5>Character Name: " + characterName2 + "</h5>" + 
