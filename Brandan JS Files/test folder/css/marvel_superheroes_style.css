@@ -46,6 +46,10 @@ body {
   /*border-bottom: 1px solid #eee;*/
 }
 
+#header, #subheader {
+  color: white !important;
+}
+
 #top_header {
    width: 1550px;
    font-family: "Times New Roman", Times, serif;
@@ -103,6 +107,11 @@ body {
    background-position: center;
    background-size: cover;
 }
+
+.summary {
+  color: white !important;
+}
+
 .carousel-caption h4 {
   color: lightyellow;
   font-size: 2em;
