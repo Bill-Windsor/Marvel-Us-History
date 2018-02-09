@@ -143,8 +143,12 @@ body {
    font: bold 18px Georgia;
    color: black;
    border: 1px solid white;
-   margin: 0px 10px 10px 10px;
+   margin: 5px 10px 10px 10px;
    padding: 0px 0px 0px 0px;
+}
+
+#inputButton {
+  margin-top: 5px;
 }
 
 #userComm2 {
@@ -228,7 +232,7 @@ img.skewed:hover {
 }
 
 .scroll {
-   width: 290px; 
+   /*width: 290px; */
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: scroll; /* Add vertical scrollbar */
 /*  overflow: auto;

@@ -78,6 +78,65 @@ $(document).ready(function() {
                  else {
                    modal();
                 }
+                  // Initialize Firebase
+//   var config = {
+//     apiKey: "AIzaSyCLHaKI6syAWKpwHmDPl9I5Ab-fQdjC1zY",
+//     authDomain: "marveluserinterestlog.firebaseapp.com",
+//     databaseURL: "https://marveluserinterestlog.firebaseio.com",
+//     projectId: "marveluserinterestlog",
+//     storageBucket: "",
+//     messagingSenderId: "534432662754"
+//   };
+
+//   firebase.initializeApp(config);
+
+//       var dataRef = firebase.database();
+//     // Initial Values
+//     var character = "";
+//     var characterArray = [];
+//     var arrayIndex = 0;
+
+// // Capture Button Click
+// // Code in the logic for storing and retrieving the most recent character.
+
+//     $("#inputButton").on("click", function(event) {
+//       event.preventDefault();
+//       character = $("#characterInput").val().trim();
+//       characterArray.push(character);
+//       console.log("The character requested is:  " + character);
+//       console.log("The characterArray is:  " + characterArray);
+
+//       // Code for the push
+//       dataRef.ref().push({
+//         Character: character,
+//       });
+
+// // clear text-boxes
+//       $("#characterInput").val("");
+//     });
+
+// // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
+//     dataRef.ref().on("child_added", function(childSnapshot) {
+//       // Log everything that's coming out of snapshot
+//       console.log(childSnapshot.val().Character);
+
+// // full list of trains to the well
+//       $("#character-display").append(
+//         "<div class='well'><span id='characterInput'> " + childSnapshot.val().Character + " </span></div>");
+
+//     dataRef.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
+
+// // Change the HTML to reflect
+//   for (var i = 0; i < 9;  i++) {
+//     document.getElementById("character-display").innerHTML = characterArray[i];
+//     }
+//         $("#character-display").text(snapshot.val().Character);
+//     });
+
+// // Prevents page from refreshing
+//        return false;
+//    });
+
             }
 
             //Once character is confirmed to be a Marvel character, display name, real name, description and image to DOC
