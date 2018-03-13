@@ -328,7 +328,7 @@ $(document).on("click", ".movies", function() {
       $("#plot").css("background-image", "url('../images/space_background_image_2.jpg");
       // $("aside").css("background-image", "url('../images/marvelwallpaper.jpg");
       $("aside").empty();
-      $("aside").html("<h4 id='characterName'>Character Bio and Synopsis</h4>");
+      $("aside").html("<h4 id='characterName'><p>Marvel started in 1939 as Timely Publications, and by the early 1950s, had generally become known as Atlas Comics. The Marvel branding began 1961, the year that the company launched The Fantastic Four and other superhero titles created by Stan Lee, Jack Kirby, Steve Ditko, and many others.</p><p>Marvel counts among its characters such well-known superheroes as Spider-Man, Wolverine, the Hulk, Thor, Iron Man, Captain America, Daredevil, and Iron Fist, including such teams as the Avengers, the X-Men, the Guardians of the Galaxy, and the Fantastic Four, and antagonists such as Venom, Doctor Doom, the Red Skull, the Green Goblin, Thanos, Ultron, Doctor Octopus, Magneto, Kang the Conqueror, Mystique, and Loki. Most of Marvel's fictional characters operate in a single reality known as the Marvel Universe, with most locations mirroring real-life places; many major characters are based in New York City.</p></h4>");
 
       
     });
