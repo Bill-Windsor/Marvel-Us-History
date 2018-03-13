@@ -43,7 +43,6 @@ body {
   vertical-align: middle;
   padding: 10px 10px 10px 10px;
   margin: 0px 0px 0px 0px;
-  /*border-bottom: 1px solid #eee;*/
 }
 
 #header, #subheader {
@@ -123,7 +122,7 @@ body {
   float: left;
   font-style: bold;
   height: 600px;
-  border: 3px solid gray;
+  border: 1px solid white;
   background-color: #66CCCC;
   margin: 0px 0px 0px 0px 0px;
   padding: 10px 10px 10px 10px;
@@ -154,7 +153,7 @@ body {
 #userComm2 {
    font: bold 18px Georgia;
    color: midnightblue;
-   border: 1px solid gray;
+   /* border: 1px solid gray; */
    margin: 0px 20px 10px 20px;
    padding: 10px 0px 10px 10px;
    max-width: 260px;
@@ -164,7 +163,7 @@ body {
 #userComm3 {
    font: bold 18px Georgia;
    color: darkred;
-   border: 1px solid gray;
+   /* border: 1px solid gray; */
    margin: 10px 20px 10px 20px;
    padding: 10px 0px 10px 10px;
 }
@@ -172,7 +171,7 @@ body {
 #userComm4 {
    font: bold 18px Georgia;
    color: black;
-   border: 1px solid gray;
+   /* border: 1px solid gray; */
    margin: 10px 10px 10px 10px;
    padding: 10px 10px 10px 0px;
 }
@@ -180,11 +179,12 @@ body {
 #image_gallery {
     text-align: left;
     color: lightyellow;
-    border: 3px solid gray
+    /* border: 3px solid gray; */
     font: bold 18px Georgia;
     /*color: darkblue; */
     /*margin: 10px 20px 10px 20px;*/
-    margin-left: -148px
+    margin-left: -1px;
+    margin-right: -310px;
     padding: 0px 0px 10px 10px;
 }
 
@@ -199,9 +199,9 @@ body {
 }
 
 .scaled {
-  width: 195px;
-  height: 180px;
-  margin-bottom: 10px;
+  width: 24%;
+  height: 169px;
+  margin-bottom: 15px;
 }
 
 img.scaled:hover {
@@ -242,4 +242,18 @@ img.skewed:hover {
   margin-bottom: 10px;
 }
 
+#footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
 
+#credit {
+    margin-right: 12%;
+
+}
+
+#search {
+  margin-left: 35px;
+}
